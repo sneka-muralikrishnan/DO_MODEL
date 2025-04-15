@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  'Domodel'
 
 steps:
 - task: Maven@3
