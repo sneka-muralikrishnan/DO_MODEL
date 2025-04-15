@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="aid" placeholder="Account Number">
+    <input type="password" id="pwd" placeholder="Pin number">
+    <button onclick="isValid()">SUBMIT</button>
+    </form>
+
+</body>
+<script>
+    function isValid(){
+        let aid = document.getElementById("aid");
+        let pwd = document.getElementById("pwd");
+        let aid_reg = /^[A-Z0-9]{10}/;
+        let pwd_reg = /^[0-9]{6}/;
+        if(!(pwd_reg.test(pwd)) || !(aid_reg.test(aid))){
+            alert("Wrong Credentials");
+        }
+        else{
+            alert("Login Success");
+        }
+    }
+</script>
+</html>
